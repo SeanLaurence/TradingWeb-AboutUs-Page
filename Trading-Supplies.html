@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HMC Trading</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #fff;
+      color: #111;
+    }
+
+/* Dropdown Menu */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      min-width: 180px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 20;
+      border-radius: 4px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px 15px;
+      color: #111;
+      text-decoration: none;
+      font-weight: 400;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f5f5f5;
+      color: #0094D9;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown > a {
+      display: inline-block;
+    }
+
+
+   .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 100vh;
+      padding: 60px 8%;
+      box-sizing: border-box;
+    }
+
+    .text-section {
+      flex: 1;
+      max-width: 500px;
+    }
+
+    .text-section h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+
+    details {
+      border-bottom: 2px solid #111;
+      padding: 15px 0;
+      cursor: pointer;
+    }
+
+    summary {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    summary::after {
+      content: "+";
+      font-size: 1.5rem;
+      font-weight: 300;
+      transition: transform 0.3s ease;
+    }
+
+    details[open] summary::after {
+      transform: rotate(45deg);
+    }
+
+    details p, details ul {
+      margin: 15px 0 0 0;
+      color: #333;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    details ul {
+      padding-left: 20px;
+    }
+
+    details li {
+      margin-bottom: 10px;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #004d1a;
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .button:hover {
+      background-color: #007b2c;
+    }
+
+    .image-section {
+      flex: 1;
+      text-align: right;
+    }
+
+    .image-section img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #111;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #0094D9;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #111;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .text-section {
+        max-width: 100%;
+      }
+      .image-section {
+        margin-top: 40px;
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="https://drive.google.com/thumbnail?id=1iQXLNKt0Y0i3Fuc_xYrdhufNaqmkf-qz" alt="Logo">
+    </div>
+    <nav>
+         <a href="https://seanlaurence.github.io/TradingWeb-AboutUs-Page/TradingWebsitee.html" target="_blank">Home</a>
+
+<!-- Dropdown Menu -->
+      <div class="dropdown">
+        <a href="#">Products ▾</a>
+        <div class="dropdown-content">
+          <a href="abrasives.html">Abrasives</a>
+          <a href="Trading-Supplies.html">Trading Supplies</a>
+        </div>
+      </div>
+
+      <a href="https://SeanLaurence.github.io/TradingWeb-AboutUs-Page/aboutus.html" target="_blank">About Us</a>
+
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- Left Text Section -->
+    <div class="text-section">
+      <h1>HMC<br>BLASTING HOSE</h1>
+
+      <details>
+        <summary>DESCRIPTION</summary>
+        <p>
+          1/2" x 10M
+        </p>
+        <p> 
+          1/2" x 20M
+        </p>
+        <p> 
+          1" x 20M
+        </p>
+        <p> 
+          1" x 40M
+        </p>
+        <p> 
+          1-1/4" x 20M
+        </p>
+        <p> 
+          1-1/4" x 40M
+        </p>
+      </details>
+
+      <a href="#" class="button">Request For Qoutation</a>
+    </div>
+
+    <!-- Right Image Section -->
+    <div class="image-section">
+      <img src="https://www.speedo-marine.com/uploads/categories/images/Blast_Hose_1528879726.png" alt="Clemco Automation System">
+    </div>
+  </div>
+
+
+
+  <div class="container">
+    <!-- Left Text Section -->
+    <div class="text-section">
+      <h1>HMC<br>BLASTING COUPLING</h1>
+
+
+      <details>
+        <summary>DESCRIPTION</summary>
+        <p>
+          1/2" Claw Type
+        </p>
+        <p> 
+          39mm Ductile Steel (1-1/4")
+        </p>
+        <p>
+          39mm Nylon (1-1/4")
+        </p>
+        <p>
+          48mm Ductile Steel (1-1/2")
+        </p>
+        <p>
+          48mm Nylon (1-1/2")
+        </p>
+      </details>
+
+      <a href="#" class="button">Request For Qoutation</a>
+    </div>
+
+    <!-- Right Image Section -->
+    <div class="image-section">
+      <img src="https://www.speedo-marine.com/uploads/categories/images/DSC01298-1_1526888803.jpg">
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Left Text Section -->
+    <div class="text-section">
+      <h1>HMC<br>BLASTING NOZZLE HOLDER</h1>
+
+
+      <details>
+        <summary>DESCRIPTION</summary>
+        <p>
+          27mm Aluminum - Fine Thread (1/2")
+        </p>
+        <p> 
+          39mm Aluminum - Fine Thread (1-1/4")
+        </p>
+        <p>
+          48mm Aluminum - Fine Thread (1-1/2")
+        </p>
+        <p>
+          39mm Aluminum - Wide Thread (1-1/4")
+        </p>
+        <p>
+          39mm Yellow Nylon - Wide Thread (1-1/4")
+        </p>
+        <p>
+          48mm Aluminum - Wide Thread (1-1/2")
+        </p>
+        <p>
+          48mm Yellow Nylon - Wide Thread (1-1/2")
+        </p>
+      </details>
+
+      <a href="#" class="button">Request For Qoutation</a>
+    </div>
+
+    <!-- Right Image Section -->
+    <div class="image-section">
+      <img src="https://www.speedo-marine.com/uploads/categories/images/DSC01288-2_1526888815.jpg">
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Left Text Section -->
+    <div class="text-section">
+      <h1>HMC<br>CLAW COUPLING</h1>
+
+
+      <details>
+        <summary>DESCRIPTION</summary>
+        <p>
+          1-1/4" Ductile
+        </p>
+        <p> 
+          3/8" M NPT
+        </p>
+        <p>
+          1/2" M NPT
+        </p>
+        <p>
+          3/4" M NPT
+        </p>
+        <p>
+          1" M NPT
+        </p>
+        <p>
+          3/8" F NPT
+        </p>
+        <p>
+          1/2" F NPT
+        </p>
+        <p>
+          3/4" F NPT
+        </p>
+        <p>
+          1" F NPT
+        </p>
+        <p>
+          1-1/4" NPTF, 4-Lugs, Iron
+        </p>
+        <p>
+          1-1/2" NPTF, 4-Lugs, Iron
+        </p>
+        <p>
+          3/8" Hose End 
+        </p>
+        <p>
+          1/2" Hose End
+        </p>
+        <p>
+          3/4" Hose End 
+        </p>
+        <p>
+          1" Hose End 
+        </p>
+      </details>
+
+      <a href="#" class="button">Request For Qoutation</a>
+    </div>
+
+    <!-- Right Image Section -->
+    <div class="image-section">
+      <img src="https://www.speedo-marine.com/uploads/categories/images/Claw_Coupling_1520993764.jpg">
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Left Text Section -->
+    <div class="text-section">
+      <h1>HMC<br>CLAW AIRTUBE</h1>
+
+
+      <details>
+        <summary>DESCRIPTION</summary>
+        <p>
+          CAT Assembly
+        </p>
+      </details>
+
+      <a href="#" class="button">Request For Qoutation</a>
+    </div>
+
+    <!-- Right Image Section -->
+    <div class="image-section">
+      <img src="https://www.abrasivesinc.com/SSP%20Applications/NetSuite%20Inc.%20-%20SCS/SuiteCommerce%20Standard/img/item%20images/04410CL_01.JPG?resizeid=2&resizeh=600&resizew=600">
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Left Text Section -->
+    <div class="text-section">
+      <h1>HMC<br>SPRAY GUN</h1>
+
+
+      <details>
+        <summary>DESCRIPTION</summary>
+        <p>
+          XTR5 Airless Spray Gun
+        </p>
+        <p> 
+          XTR7, 4 Finger, XHD 519 RAC TIP
+        </p>
+        <p>
+          XTR7+1, 2 Finger, XHD 519 RAC TIP
+        </p>
+        <p>
+          Silver Plus Gun, 2 Finger, w/ Flat Tip
+        </p>
+        <p>
+          Silver Plus Gun, 4 Finger, w/ Flat Tip
+        </p>
+        <p>
+          Silver Plus Gun, 2 Finger HD RAC 617 TIP
+        </p>
+        <p>
+          Silver Plus Gun, 2 Finger, RAC 5 517 TIP + TIp Guard
+        </p>
+        <p>
+          Silver Plus Gun, 2 Finger, RAC X517 TIP + TIp Guard
+        </p>
+        <p>
+          Repair Kit
+        </p>
+        <p>
+          Gun Swivel 1/4"
+        </p>
+        <p>
+          Contractor Gun, 2 Finger, LTX517 TIP
+        </p>
+        <p>
+          Contractor Gun, 2 Finger, RAC V517
+        </p>
+        <p>
+          Contractor Gun, 4 Finger, RAC X517
+        </p>
+        <p>
+          FTX-A Gun, 4 Finger, RAC X517
+        </p>
+        <p>
+          FTX-A Gun, 2 Finger, RAC X515
+        </p>
+        <p>
+          FTX-A Gun, 4 Finger, RAC X515
+        </p>
+        <p>
+          FTX-A Gun, 4 Finger, RAC V515
+        </p>
+        <p>
+          SG2 Airless Spray Gun
+        </p>
+        <p>
+          SG3 w/ RAC 5 TIP 515
+        </p>
+      </details>
+
+      <a href="#" class="button">Request For Qoutation</a>
+    </div>
+
+    <!-- Right Image Section -->
+    <div class="image-section">
+      <img src="https://www.speedo-marine.com/uploads/categories/images/Graco_Spray_Gun_1592456165.png">
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Left Text Section -->
+    <div class="text-section">
+      <h1>HMC<br>SPRAY TIPS and GUARD</h1>
+
+
+      <details>
+        <summary>DESCRIPTION</summary>
+        <p>
+          RAC 5 Switch Tip
+        </p>
+        <p> 
+          FF LP RAC x Switch Tip 
+        </p>
+        <p>
+          LL RAC 5 Switch Tip
+        </p>
+        <p>
+          RAC x Switch Tip
+        </p>
+        <p>
+          Widerac RAC x Switch Tip
+        </p>
+        <p>
+          XHD RAC Switch Tip
+        </p>
+        <p>
+          TIP Guard 7/8" Thread
+        </p>
+        <p>
+          TIP Guard 11/16" Thread
+        </p>
+        <p>
+          TIP Guard 7/8" Thread for RAC 5 Tip
+        </p>
+        <p>
+          Tip Guard 7/8" Thread for FFLP, RAC X, FFT, WR TIP
+        </p>
+        <p>
+          Tip Guard 7/8" Thread for XHD TIP
+        </p>
+      </details>
+
+      <a href="#" class="button">Request For Qoutation</a>
+    </div>
+
+    <!-- Right Image Section -->
+    <div class="image-section">
+      <img src="https://www.speedo-marine.com/uploads/categories/images/Graco_Spray_Tip_and_Guard_1592460676.png">
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Left Text Section -->
+    <div class="text-section">
+      <h1>HMC<br>PAINT HOSE</h1>
+
+
+      <details>
+        <summary>DESCRIPTION</summary>
+        <p>
+          Airless Paint Hose 1/4" x 25', 3300 psi
+        </p>
+        <p> 
+          Airless Paint Hose 1/4" x 50', 3300 psi
+        </p>
+        <p>
+          Airless Paint Hose 3/8" x 25', 3300 psi
+        </p>
+        <p>
+          Airless Paint Hose 3/8" x 50', 3300 psi
+        </p>
+        <p>
+          Whip Hose, 1/4" x 3', 4500 psi
+        </p>
+        <p>
+          Airless Paint Hose, 1/4 x 6', 4500 psi
+        </p>
+        <p>
+          Airless Paint Hose, 1/4 x 100', 4500 psi
+        </p>
+        <p>
+          Airless Paint Hose, 1/4 x 25', 4500 psi
+        </p>
+        <p>
+          Airless Paint Hose, 1/4 x 50', 4500 psi
+        </p>
+        <p>
+          Airless Paint Hose, 1/4" x 3', 5600 psi
+        </p>
+        <p>
+          Airless Paint Hose, 1/4" x 6', 5600 psi
+        </p>
+        <p>
+          Airless Paint Hose, 1/4" x 10', 5600 psi
+        </p>
+        <p>
+          Airless Paint Hose, 1/4" x 25', 5600 psi
+        </p>
+        <p>
+          Airless Paint Hose, 1/4" x 25', 5600 psi
+        </p>
+        <p>
+          Whip Hose, 1/4" x 6', 7250 psi
+        </p>
+        <p>
+          Airless Paint Hose, 1/4" x 10', 7250 psi
+        </p>
+        <p>
+          Airless Paint Hose, 1/4 x 100', 7250 psi
+        </p>
+        <p>
+          Airless Paint Hose, 1/4" x 25', 7250 psi
+        </p>
+        <p>
+          Airless Paint Hose, 1/4" x 50', 7250 psi
+        </p>
+        <p>
+          Whip Hose, 3/8" x 3', 4500 psi
+        </p>
+        <p>
+          Airless Paint Hose, 3/8" x 100', 4500 psi
+        </p>
+        <p>
+          Airless Paint Hose, 3/8" x 25', 4500 psi
+        </p>
+        <p>
+          Airless Paint Hose, 3/8" x 50', 4500 psi
+        </p>
+        <p>
+          Airless Paint Hose, 3/8" x 6', 5600 psi
+        </p>
+        <p>
+          Airless Paint Hose, 3/8" x 10', 5600 psi
+        </p>
+        <p>
+          Airless Paint Hose, 3/8" x 25', 5600 psi
+        </p>
+        <p>
+          Airless Paint Hose, 3/8" x 50', 5600 psi
+        </p>
+        <p>
+          Airless Paint Hose, 3/8" x 6', 7250 psi
+        </p>
+        <p>
+          Airless Paint Hose, 3/8" x 10', 7250 psi
+        </p>
+        <p>
+          Airless Paint Hose, 3/8" x 25', 7250 psi
+        </p>
+        <p>
+          Airless Paint Hose, 3/8" x 50', 7250 psi
+        </p>
+        <p>
+          Airless Paint Hose, 1/2" x 10', 4500 psi
+        </p>
+        <p>
+          Airless Paint Hose, 1/2" x 100', 4500 psi
+        </p>
+        <p>
+          Airless Paint Hose, 1/2" x 50', 4500 psi
+        </p>
+        <p>
+          Airless Paint Hose, 1/2" x 10', 5600 psi
+        </p>
+        <p>
+          Airless Paint Hose, 1/2" x 100', 5600 psi
+        </p>
+        <p>
+          Airless Paint Hose, 1/2" x 25', 5600 psi
+        </p>
+        <p>
+          Airless Paint Hose, 1/2" x 50', 5600 psi
+        </p>
+        <p>
+          Airless Paint Hose, 1/2" x 2', 7250 psi
+        </p>
+        <p>
+          Airless Paint Hose, 1/2" x 3', 7250 psi
+        </p>
+        <p>
+          Airless Paint Hose, 1/2" x 10', 7250 psi
+        </p>
+        <p>
+          Airless Paint Hose, 1/2" x 100', 7250 psi
+        </p>
+        <p>
+          Airless Paint Hose, 1/2" x 25', 7250 psi
+        </p>
+        <p>
+          Airless Paint Hose, 1/2" x 50', 7250 psi
+        </p>
+       </details>
+
+      <a href="#" class="button">Request For Qoutation</a>
+    </div>
+
+    <!-- Right Image Section -->
+    <div class="image-section">
+      <img src="https://www.speedo-marine.com/uploads/categories/images/Graco_Paint_Hose_1520995493.jpg">
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Left Text Section -->
+    <div class="text-section">
+      <h1>HMC<br>SANDBLASTING NOZZLE</h1>
+
+
+      <details>
+        <summary>DESCRIPTION</summary>
+        <p>
+          Sandblasting Nozzle 3/8"
+        </p>
+      </details>
+
+      <a href="#" class="button">Request For Qoutation</a>
+    </div>
+
+    <!-- Right Image Section -->
+    <div class="image-section">
+      <img src="https://www.speedo-marine.com/uploads/categories/images/20180427_125114-1_1526889126.jpg">
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Left Text Section -->
+    <div class="text-section">
+      <h1>HMC<br>AIR HOSE</h1>
+
+
+      <details>
+        <summary>DESCRIPTION</summary>
+        <p>
+          1 1/4" x 50ft
+        </p>
+        <p> 
+          3/8" x 50ft
+        </p>
+        <p>
+          3/4" x 20m 
+        </p>
+      </details>
+
+      <a href="#" class="button">Request For Qoutation</a>
+    </div>
+
+    <!-- Right Image Section -->
+    <div class="image-section">
+      <img src="https://www.speedo-marine.com/uploads/categories/images/Air_Hose_1592380649.png">
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>Contact us at: hmc.trades@gmail.com</p>
+    © 2021 HMC Trading. All rights reserved.
+  </footer>
+
+
+
+
+</body>
+</html>

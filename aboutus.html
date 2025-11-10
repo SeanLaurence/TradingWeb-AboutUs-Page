@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HMC Trading</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff;
+      color: #222;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #111;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #0094D9;
+    }
+/* Dropdown Menu */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      min-width: 180px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 20;
+      border-radius: 4px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px 15px;
+      color: #111;
+      text-decoration: none;
+      font-weight: 400;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f5f5f5;
+      color: #0094D9;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown > a {
+      display: inline-block;
+    }
+
+/* HERO SLIDER */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 90vh; /* Slider height */
+      max-height: 700px;
+      background-color: #000; /* background for images that don't fill width */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .carousel {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.8s ease-in-out;
+      width: 300%;
+      height: 100%;
+    }
+
+    .slide {
+      min-width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #000;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* 🔹 Fits the whole image without cropping */
+      object-position: center;
+      background-color: #000;
+    }
+    /* Dots */
+    .dots {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 12px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      background-color: #bbb;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .dot.active { background-color: #3b8fc5; }
+
+
+    /* Full-width Image Section */
+    .fullwidth-image {
+      width: 100%;      /* Full browser width */
+      height: auto;     /* Maintain original aspect ratio */
+      display: block;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #111;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      header { flex-direction: column; }
+      .hero { height: 60vh; }
+      .slide img { height: 60vh; }
+      .caption h1 { font-size: 2rem; }
+      .reviews { flex-direction: column; }
+      .news-grid { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="https://drive.google.com/thumbnail?id=1iQXLNKt0Y0i3Fuc_xYrdhufNaqmkf-qz" alt="Logo">
+    </div>
+    <nav>
+         <a href="https://seanlaurence.github.io/TradingWeb-AboutUs-Page/TradingWebsitee.html" target="_blank">Home</a>
+
+<!-- Dropdown Menu -->
+      <div class="dropdown">
+        <a href="#">Products ▾</a>
+        <div class="dropdown-content">
+          <a href="https://seanlaurence.github.io/TradingWeb-AboutUs-Page/abrasives.html" target="_blank">Abrasives</a>
+          <a href="https://seanlaurence.github.io/TradingWeb-AboutUs-Page/Trading-Supplies.html" target="_blank">Trading Supplies</a>
+        </div>
+      </div>
+
+      <a href="https://SeanLaurence.github.io/TradingWeb-AboutUs-Page/aboutus.html" target="_blank">About Us</a>
+
+    </nav>
+  </header>
+
+  <!-- Multiple Full-Width Images -->
+
+  <img src="https://github.com/SeanLaurence/trading-website-image/blob/main/aboutus2.png?raw=true" 
+       alt="HMC Trading 2" class="fullwidth-image">
+
+  <img src="https://github.com/SeanLaurence/trading-website-image/blob/main/aboutus3.png?raw=true" 
+       alt="HMC Trading 3" class="fullwidth-image">
+
+  <img src="https://github.com/SeanLaurence/trading-website-image/blob/main/aboutus4.png?raw=true" 
+       alt="HMC Trading 3" class="fullwidth-image">
+
+  <img src="https://github.com/SeanLaurence/trading-website-image/blob/main/aboutus5.png?raw=true" 
+       alt="HMC Trading 3" class="fullwidth-image">
+
+
+<section class="hero">
+  <div class="slides">
+    <div class="slide"><img src="https://drive.google.com/thumbnail?id=1n1_KN5ihQI49qH5BJa9F5Tcxs6xALbgl" alt="Slide 2"></div>
+    <div class="slide"><img src="https://drive.google.com/thumbnail?id=1qEbrocvLjT1WTmdimowvMd4gTETXCKZA" alt="Slide 2"></div>
+    <div class="slide"><img src="https://drive.google.com/thumbnail?id=1AXY4CZeu_b2EP1WB3-vngkrO7VcNcysw" alt="Slide 3"></div>
+  </div>
+
+
+  <!-- Dots -->
+  <div class="dots">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Contact us at: hmc.trades@gmail.com</p>
+    © 2021 HMC Trading. All rights reserved.
+  </footer>
+
+<script>
+    let slideIndex = 0;
+    const slidesContainer = document.querySelector(".slides");
+    const dots = document.querySelectorAll(".dot");
+    const totalSlides = dots.length;
+
+    function showSlide(index) {
+      slideIndex = (index + totalSlides) % totalSlides;
+      slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+      dots.forEach(dot => dot.classList.remove("active"));
+      dots[slideIndex].classList.add("active");
+    }
+
+    function nextSlide() {
+      showSlide(slideIndex + 1);
+    }
+
+    function currentSlide(n) {
+      showSlide(n);
+    }
+
+    setInterval(nextSlide, 5000); // Auto-slide every 5 seconds
+    showSlide(slideIndex);
+  </script>
+
+
+
+</body>
+</html>

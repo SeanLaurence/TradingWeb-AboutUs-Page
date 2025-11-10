@@ -4,10 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HMC Trading</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-family: "Roboto", sans-serif;
       background-image: src
       background-color: #fff;
       color: #222;
@@ -46,49 +49,78 @@
       color: #0094D9;
     }
 
+
+/* Dropdown Menu */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      min-width: 180px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 20;
+      border-radius: 4px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px 15px;
+      color: #111;
+      text-decoration: none;
+      font-weight: 400;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f5f5f5;
+      color: #0094D9;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown > a {
+      display: inline-block;
+    }
+
+
     /* HERO SLIDER */
     .hero {
+     position: relative;
+     width: 100%;
+     height: 90vh;
+     max-height: 700px;
+     overflow: hidden;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+    }
+
+     .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;      /* ✅ fills the entire area without black bars */
+      z-index: 0;
+    }
+
+      .caption {
       position: relative;
-      overflow: hidden;
-      width: 100%;
-      height: 90vh; /* Slider height */
-      max-height: 700px;
-      background-color: #000; /* background for images that don't fill width */
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      z-index: 1;
+      text-align: center;
+      color: #fff;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
     }
 
-    .carousel {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
 
-    .slides {
-      display: flex;
-      transition: transform 0.8s ease-in-out;
-      width: 300%;
-      height: 100%;
-    }
-
-    .slide {
-      min-width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #000;
-    }
-
-    .slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain; /* 🔹 Fits the whole image without cropping */
-      object-position: center;
-      background-color: #000;
-    }
 
     /* Caption styling */
     .caption {
@@ -309,9 +341,19 @@
     </div>
     <nav>
       <a href="#">Home</a>
-      <a href="#">Products</a>	
+
+<!-- Dropdown Menu -->
+      <div class="dropdown">
+        <a href="#">Products ▾</a>
+        <div class="dropdown-content">
+          <a href="abrasives.html">Abrasives</a>
+          <a href="Trading-Supplies.html">Trading Supplies</a>
+        </div>
+      </div>
+
+
       <a href="https://SeanLaurence.github.io/TradingWeb-AboutUs-Page/aboutus.html" target="_blank">About Us</a>
-      <a href="#">Contacts</a>
+
     </nav>
   </header>
 
@@ -399,31 +441,36 @@
 </style>
 </head>
 
+ <img src="https://github.com/SeanLaurence/Trading-Pictures/blob/main/Company%20Profile/website%20banner.png?raw=true" 
+  style="display:block; width:100vw; height:auto; margin:0; padding:0; object-fit:cover;">
+
 
 <!-- What's New Section -->
 <section class="whats-new">
+
+
 
   <!-- Featured Products First -->
   <h2>ABRASIVES</h2>
   <div class="news-grid">
     <div class="news-item">
      <img src="https://drive.google.com/thumbnail?id=1V5-SRzhSdzp7tUMIzisUGCmlLTy4MnG9&sz=w1000" alt="Copper Slag">
-      <div class="content"><h3>Copper Slag</h3></div>
+      <div class="content"><h3>COPPER SLAG</h3></div>
     </div>
 
     <div class="news-item">
       <img src="https://drive.google.com/thumbnail?id=1g9vChGmU7oJLQCapuboOGOzVeZ3YFpPy" alt="Garnet">
-      <div class="content"><h3>Garnet</h3></div>
+      <div class="content"><h3>GARNET</h3></div>
     </div>
 
     <div class="news-item">
       <img src="https://drive.google.com/thumbnail?id=1QStbsKkzx8OKcjSgj_puihy1hEQOzE-_" alt="Glass Beads">
-      <div class="content"><h3>Glass Beads</h3></div>
+      <div class="content"><h3>GLASS BEADS</h3></div>
     </div>
 
     <div class="news-item">
       <img src="https://drive.google.com/thumbnail?id=1KlTXW3t1Clzq3es2W0H7CiU1OqsMbshZ" alt="Steel Grit">Steel Grit
-      <div class="content"><h3>Steel Grit</h3></div>
+      <div class="content"><h3>STEEL GRIT</h3></div>
     </div>
   </div>
 
@@ -433,52 +480,52 @@
   <div class="news-grid">
     <div class="news-item">
       <img src="https://www.speedo-marine.com/uploads/categories/images/Blast_Hose_1528879726.png" alt="Blasting Hose">
-      <div class="content"><h3>Blasting Hose</h3></div>
+      <div class="content"><h3>BLASTING HOSE</h3></div>
     </div>
 
     <div class="news-item">
       <img src="https://www.speedo-marine.com/uploads/categories/images/DSC01298-1_1526888803.jpg" alt="Blasting Coupling">
-      <div class="content"><h3>Blasting Coupling</h3></div>
+      <div class="content"><h3>BLASTING COUPLING</h3></div>
     </div>
 
     <div class="news-item">
       <img src="https://www.speedo-marine.com/uploads/categories/images/DSC01288-2_1526888815.jpg" alt="Blasting Nozzle Holder">
-      <div class="content"><h3>Blasting Nozzle Holder</h3></div>
+      <div class="content"><h3>BLASTING NOZZLE HOLDER</h3></div>
     </div>
 
     <div class="news-item">
       <img src="https://www.speedo-marine.com/uploads/categories/images/Claw_Coupling_1520993764.jpg" alt="Claw Coupling">
-      <div class="content"><h3>Claw Coupling</h3></div>
+      <div class="content"><h3>CLAW COUPLING</h3></div>
     </div>
 
     <div class="news-item">
       <img src="https://www.abrasivesinc.com/SSP%20Applications/NetSuite%20Inc.%20-%20SCS/SuiteCommerce%20Standard/img/item%20images/04410CL_01.JPG?resizeid=2&resizeh=600&resizew=600" alt="Claw Airtube">
-      <div class="content"><h3>Claw Airtube</h3></div>
+      <div class="content"><h3>CLAW AIRTUBE</h3></div>
     </div>
 
     <div class="news-item">
       <img src="https://www.speedo-marine.com/uploads/categories/images/Graco_Spray_Gun_1592456165.png" alt="Spray Gun">
-      <div class="content"><h3>Spray Gun</h3></div>
+      <div class="content"><h3>SPRAY GUN</h3></div>
     </div>
 
     <div class="news-item">
       <img src="https://www.speedo-marine.com/uploads/categories/images/Graco_Spray_Tip_and_Guard_1592460676.png" alt="Spray Tips & Guard">
-      <div class="content"><h3>Spray Tips & Guard</h3></div>
+      <div class="content"><h3>SPRAY TIPS & GUARD</h3></div>
     </div>
 
     <div class="news-item">
       <img src="https://www.speedo-marine.com/uploads/categories/images/Graco_Paint_Hose_1520995493.jpg" alt="Paint Hose">
-      <div class="content"><h3>Paint Hose</h3></div>
+      <div class="content"><h3>PAINT HOSE</h3></div>
     </div>
 
     <div class="news-item">
       <img src="https://www.speedo-marine.com/uploads/categories/images/20180427_125114-1_1526889126.jpg" alt="Sandblasting Nozzle">
-      <div class="content"><h3>Sandblasting Nozzle</h3></div>
+      <div class="content"><h3>SANDBLASTING NOZZLE</h3></div>
     </div>
 
     <div class="news-item">
       <img src="https://www.speedo-marine.com/uploads/categories/images/Air_Hose_1592380649.png" alt="Air Hose">
-      <div class="content"><h3>Air Hose</h3></div>
+      <div class="content"><h3>AIR HOSE</h3></div>
     </div>
   </div>
 </section>
@@ -520,54 +567,14 @@
 
 <body>
 
-<section class="hero">
-  <div class="slides">
-    <div class="slide"><img src="C:\Users\hmcli\OneDrive\Pictures\pic\Trading\Company Profile/1.jpg" alt="Slide 1"></div>
-    <div class="slide"><img src="C:\Users\hmcli\OneDrive\Pictures\pic\Trading\Company Profile/2.jpg" alt="Slide 2"></div>
-    <div class="slide"><img src="C:\Users\hmcli\OneDrive\Pictures\pic\Trading\Company Profile/3.jpg" alt="Slide 3"></div>
-    <div class="slide"><img src="C:\Users\hmcli\OneDrive\Pictures\pic\Trading\Company Profile/4.jpg" alt="Slide 5"></div>
-    <div class="slide"><img src="C:\Users\hmcli\OneDrive\Pictures\pic\Trading\Company Profile/5.jpg" alt="Slide 6"></div>
-    <div class="slide"><img src="C:\Users\hmcli\OneDrive\Pictures\pic\Trading\Company Profile/6.jpg" alt="Slide 7"></div>
-    <div class="slide"><img src="C:\Users\hmcli\OneDrive\Pictures\pic\Trading\Company Profile/7.jpg" alt="Slide 8"></div> 
-  </div>
+<!-- HERO VIDEO SECTION -->
+    <section class="hero">
+    <img src="https://github.com/SeanLaurence/Trading-Videos/blob/main/CAMPAIGN.gif?raw=true" alt="Background GIF" style="width:100%;        height:auto; display:block; object-fit:cover;">
+     
 
-
-  <!-- Dots -->
-  <div class="dots">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-    <span class="dot" onclick="currentSlide(4)"></span>
-    <span class="dot" onclick="currentSlide(5)"></span>
-    <span class="dot" onclick="currentSlide(6)"></span>
-    <span class="dot" onclick="currentSlide(7)"></span>
-    <span class="dot" onclick="currentSlide(8)"></span>
-  </div>
 </section>
 
-<script>
-  let slideIndex = 0;
-  const slidesContainer = document.querySelector('.slides');
-  const slides = document.querySelectorAll('.slide');
-  const dots = document.querySelectorAll('.dot');
 
-  function showSlide(n) {
-    if (n >= slides.length) slideIndex = 0;
-    else if (n < 0) slideIndex = slides.length - 1;
-    else slideIndex = n;
-
-    slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
-
-    dots.forEach(dot => dot.classList.remove('active'));
-    dots[slideIndex].classList.add('active');
-  }
-
-  function plusSlides(n) { showSlide(slideIndex + n); }
-  function currentSlide(n) { showSlide(n - 1); }
-
-  setInterval(() => plusSlides(1), 6000);
-  showSlide(slideIndex);
-</script>
 
 </body>
 

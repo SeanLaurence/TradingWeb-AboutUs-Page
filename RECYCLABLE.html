@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HMC Trading</title>
+ <style>
+  body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    color: #111;
+  }
+
+  /* Dropdown Menu */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    min-width: 180px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 20;
+    border-radius: 4px;
+  }
+
+  .dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    color: #111;
+    text-decoration: none;
+    font-weight: 400;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f5f5f5;
+    color: #0094D9;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown > a {
+    display: inline-block;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 60px 8%;
+    box-sizing: border-box;
+  }
+
+  .text-section {
+    flex: 1;
+    max-width: 500px;
+  }
+
+  .text-section h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  /* DETAILS styling */
+  details {
+    border-bottom: 2px solid #111;
+    padding: 15px 0;
+    cursor: pointer;
+  }
+
+  summary {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 700; /* ✅ Make DESCRIPTION bold */
+    text-transform: uppercase;
+  }
+
+  summary::after {
+    content: "+";
+    font-size: 1.5rem;
+    font-weight: 300;
+    transition: transform 0.3s ease;
+  }
+
+  details[open] summary::after {
+    transform: rotate(45deg);
+  }
+
+  /* ✅ Add spacing and slight left indent to content */
+  details p, details ul {
+    margin: 12px 0 0 18px;
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .button {
+    display: inline-block;
+    background-color: #004d1a;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+  }
+
+  .button:hover {
+    background-color: #007b2c;
+  }
+
+  /* Image Section - Uniform & Slightly Larger */
+  .image-section {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-section img {
+    width: 450px;
+    height: 450px;
+    object-fit: contain;
+    background: transparent;
+    border-radius: 10px;
+    mix-blend-mode: multiply;
+    filter: brightness(1.05) contrast(1.05);
+  }
+
+  /* Header */
+  header {
+    display: flex;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+  height: 65px;              /* slightly bigger but balanced */
+  width: auto;               /* keeps correct aspect ratio */
+  max-width: 180px;          /* avoids over-widening */
+  margin-right: 12px;
+  object-fit: scale-down;    /* prevents stretching */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  border-radius: 4px;        /* smoother edge */
+
+  
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #111;
+    margin: 0 15px;
+    font-weight: 500;
+  }
+
+  nav a:hover {
+    color: #0094D9;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #111;
+    color: #fff;
+    font-size: 0.9rem;
+  }
+
+    @media (max-width: 768px) {
+      header { flex-direction: column; }
+      .hero { height: 60vh; }
+      .slide img { height: 60vh; }
+      .caption h1 { font-size: 2rem; }
+      .reviews { flex-direction: column; }
+      .news-grid { flex-direction: column; align-items: center; }
+        .logo img {
+    height: 50px;
+    max-width: 150px;
+    }
+  </style>
+
+</head>
+<body>
+
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="https://drive.google.com/thumbnail?id=1Fzbz8b-OCr8KOvsKhfMmNuP2fZDZk5Go" alt="Logo">
+    </div>
+    <nav>
+      <a href="https://seanlaurence.github.io/TradingWeb-AboutUs-Page/TradingWebsiteeE">Home</a>
+
+<a href="https://seanlaurence.github.io/TradingWeb-AboutUs-Page/aboutus.html" target="_blank">About Us</a>
+
+<!-- Dropdown Menu -->
+      <div class="dropdown">
+        <a href="#">Abrasive ▾</a>
+        <div class="dropdown-content">
+          <a href="https://seanlaurence.github.io/TradingWeb-AboutUs-Page/recyclable.html" target="_blank">Recyclable</a>
+          <a href="https://seanlaurence.github.io/TradingWeb-AboutUs-Page/abrasives.html" target="_blank">Expandable</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="#">Electrical ▾</a>
+        <div class="dropdown-content">
+          <a href="https://seanlaurence.github.io/TradingWeb-AboutUs-Page/wires-cables.html" target="_blank">Wires & Cables</a>
+          <a href="https://seanlaurence.github.io/TradingWeb-AboutUs-Page/switches-outlets.html" target="_blank">Switches & Outlets</a>
+          <a href="https://seanlaurence.github.io/TradingWeb-AboutUs-Page/pvc.html" target="_blank">PVC Orange Fittings</a>
+          <a href="https://seanlaurence.github.io/TradingWeb-AboutUs-Page/junction-utility.html" target="_blank">Junction & Utility Box</a>
+          <a href="https://seanlaurence.github.io/TradingWeb-AboutUs-Page/lighting.html" target="_blank">Lightings</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="#">Trading Supplies ▾</a>
+        <div class="dropdown-content">
+          <a href="https://seanlaurence.github.io/TradingWeb-AboutUs-Page/raw-material.html" target="_blank">Raw Material</a>
+          <a href="https://seanlaurence.github.io/TradingWeb-AboutUs-Page/equipment.html" target="_blank">Equipment</a>
+          <a href="https://seanlaurence.github.io/TradingWeb-AboutUs-Page/consumable.html" target="_blank">Consumables</a>
+          <a href="https://seanlaurence.github.io/TradingWeb-AboutUs-Page/semi-consumable.html" target="_blank">Semi-Consumables</a>
+          <a href="https://seanlaurence.github.io/TradingWeb-AboutUs-Page/PPE.html" target="_blank">Personal Protective Equipment</a>
+          <a href="https://seanlaurence.github.io/TradingWeb-AboutUs-Page/blasting.html" target="_blank">Surface Preparation Supplies</a>
+        </div>
+      </div>
+
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="text-section">
+      <h1>HMC<br>Glass Beads</h1>
+      <details>
+        <summary>GENERAL USE AND PRECAUTIONARY INFORMATION</summary>
+        <p>Industrial glass beads are commonly used for blast cleaning, surface finishing, deburring, peening, and 
+           producing smooth, uniform finishes on metal, plastic, and glass components across industries such as aerospace, 
+           automotive, metalworking, and electronics. They are also used in reflective road markings and as fillers 
+           in various industrial products. When handling or using glass beads, workers should wear appropriate
+           PPE—including goggles, gloves, and respirators—and ensure proper ventilation to avoid inhaling fine dust. 
+           Equipment should be operated at the correct pressure to prevent surface damage or bead breakage, and machines 
+           must be regularly maintained. Glass beads should be stored in a dry place to prevent moisture clumping, and
+           any waste or spent abrasive material must be collected and disposed of according to local regulations.</p>
+      
+      </details>
+
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdSCmAEscy3yC02Y6t5sgMSG8HdislshkejhsQhUeSBaC0Ahg/viewform" target="_blank" class="button">Request For Quotation</a>
+    </div>
+
+    <div class="image-section">
+      <img src="https://drive.google.com/thumbnail?id=1QStbsKkzx8OKcjSgj_puihy1hEQOzE-_" alt="Copper Slag">
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="text-section">
+      <h1>HMC<br>Steel Grit</h1>
+      <details>
+        <summary>GENERAL USE AND PRECAUTIONARY INFORMATION</summary>
+        <p>Industrial steel grit is used for heavy-duty blast cleaning, surface preparation, and 
+           removing rust or coatings in industries like shipbuilding, metal fabrication, and foundries. 
+           It delivers strong cutting action and creates a good profile for coatings. When using steel grit, 
+           operators should wear proper PPE, ensure good ventilation, and avoid inhaling dust. Equipment 
+           should be properly calibrated and maintained, and the material should be stored dry to prevent 
+           corrosion. Used grit and dust must be collected and disposed of according to safety and environmental regulations.
+        </p>
+
+      </details>
+
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdSCmAEscy3yC02Y6t5sgMSG8HdislshkejhsQhUeSBaC0Ahg/viewform" target="_blank" class="button">Request For Quotation</a>
+    </div>
+
+    <div class="image-section">
+      <img src="https://drive.google.com/thumbnail?id=1KlTXW3t1Clzq3es2W0H7CiU1OqsMbshZ" alt="Garnet">
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Contact us at: hmc.trades@gmail.com</p>
+    © 2021 HMC Trading. All rights reserved.
+  </footer>
+
+</body>
+</html>
